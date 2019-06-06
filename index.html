@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>TB2 Partenza</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Calcola orario di partenza truppe">
+        <meta name="keywords" content="TW2, Tribal, Wars, 2, Calculator">
+        <meta name="author" content="Emilie Rollandin">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="dist/bootstrap/css/bootstrap.min.css">
+        <link href="dist/air-datepicker/css/datepicker.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet"> 
+        <link href="css/narrow.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-left">Calcola ora partenza</h1>
+            <p class="text-left">Tribal Wars 2</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-6">
+                <h3>Data/ora di arrivo</h3>
+                <div class="datepicker-here" data-timepicker="true" data-language='it' id='dtArrivo'></div>
+            </div>
+
+        <div class="col-lg-6">
+            <h3>Villo partenza</h3>
+        </div>
+
+        <div class="col-lg-3">
+            <input type="number" name="xPart" min="0" class="form-control" placeholder="X" value="500">
+        </div>
+
+        <div class="col-lg-3">
+            <input type="number" name="yPart" min="0" class="form-control" placeholder="Y" value="500">
+        </div>
+
+        <div class="col-lg-6">
+            <h3>Villo arrivo</h3>
+        </div>
+
+        <div class="col-lg-3">
+            <input type="number" name="xArri" min="0" class="form-control" placeholder="X" value="550">
+        </div>
+
+        <div class="col-lg-3">
+            <input type="number" name="yArri" min="0" class="form-control" placeholder="Y" value="550">
+        </div>
+
+        <div class="col-lg-6">
+            <h3>Truppe coinvolte</h3>
+        </div>
+
+        <div class="col-lg-3">
+            <div class="checkbox">
+                <label><input type="checkbox" value="" name="truppe">Lancieri</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" value="" name="truppe">Spadaccino</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" value="" name="truppe">Arcieri</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" value="" name="truppe">Cav. Pesante</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" value="" name="truppe">Trabucco</label>
+            </div>
+        </div>
+
+        <div class="col-lg-3">
+            <div class="checkbox">
+                <label><input type="checkbox" value="" name="truppe">Guerrieri</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" value="" name="truppe">Cav. leggera</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" value="" name="truppe">Arcieri a cav.</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" value="" name="truppe">Arieti</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" value="" name="truppe">Catapulta</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" value="" name="truppe">Nobili</label>
+            </div>
+        </div>
+
+        
+        
+    </div>
+        
+        <div class="row bottone">
+            <div class="col-lg-12">
+                <button type="button" class="btn btn-block" id="btnCalcola">Calcola</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h5>Durata viaggio</h5><h3 id="durataViaggio"></h3>
+            </div>
+            <div class="col-lg-12">
+                <h5>Data partenza</h5><h2 id="orarioPartenza"></h2>
+            </div>
+        </div>
+
+
+        <footer class="footer">
+            <p>&copy; 2017 Archistico</p>
+        </footer>
+        </div>
+
+        
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="dist/bootstrap/js/bootstrap.min.js"></script>
+    
+    
+    <script src="dist/moment/moment.min.js"></script>
+    <script src="dist/air-datepicker/js/datepicker.min.js"></script>
+    <script src="dist/air-datepicker/js/i18n/datepicker.it.js"></script>
+    
+    
+    <script src="js/tempo.js"></script>
+    <script src="js/test.js"></script>
+    <script>
+        var dataArrivo = 0;
+
+        $('#dtArrivo').datepicker({
+            onSelect: function (fd, d, picker) {
+                if (!d) return;
+                dataArrivo=d;
+            }
+        })
+    </script>
+    </body>
+</html>

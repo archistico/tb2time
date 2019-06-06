@@ -1,0 +1,62 @@
+body {
+    background: dimgray;
+    background-image: url("../img/background.png");
+    background-repeat: repeat;
+    font-family: 'Space Mono', monospace;
+}
+
+h1 {
+    color: darkorange;
+}
+
+
+h2 {
+    color: orange;
+}
+
+h3 {
+    color: orange;
+}
+
+.datepicker {
+  font-family: 'Space Mono', monospace;
+}
+
+.footer {
+  margin-top: 20px;
+}
+
+p {
+  color: white;
+}
+
+.jumbotron {
+  padding: 14px 10px;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.jumbotron h1 {
+  color: black;
+  font-size: 24px;
+}
+
+.jumbotron p {
+  color: darkorange;
+}
+
+label {
+  color: white;
+}
+
+.bottone {
+  margin-top: 20px;
+}
+
+.jumbotron {
+    background-image: url("../img/logo.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    -webkit-background-size: cover;
+    background-size: 35%;
+}
